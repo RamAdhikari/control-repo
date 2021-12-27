@@ -9,7 +9,7 @@
 
 
 ## What You Get From This control-repo
-
+#This is update from vscode to staging branch
 This is a template [control repository](https://puppet.com/docs/pe/latest/code_management/control_repo.html) that has the minimum amount of scaffolding to make it easy to get started with [r10k](https://puppet.com/docs/pe/latest/code_management/r10k.html) or Puppet Enterprise's [Code Manager](https://puppet.com/docs/pe/latest/code_management/code_mgr.html).
 
 The important files and items in this template are as follows:
