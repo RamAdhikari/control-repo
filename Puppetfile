@@ -2,7 +2,7 @@ forge 'https://forge.puppet.com'
   mod 'puppetlabs-ntp', '9.1.0'
   mod 'apache',
     :git => 'https://github.com/RamAdhikari/puppet-apache'
-  mod 'tasks',
+  mod 'taskss',
     :git => 'https://github.com/RamAdhikari/puppet-tasks'
     :branch => 'production'
 # Modules from the Puppet Forge
