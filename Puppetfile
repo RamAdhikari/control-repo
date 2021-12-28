@@ -3,7 +3,7 @@ forge 'https://forge.puppet.com'
   mod 'apache',
     :git => 'https://github.com/RamAdhikari/puppet-apache'
   mod 'tasks',
-    :git => 'https://github.com/RamAdhikari/puppet-tasks'
+    :git => 'https://github.com/RamAdhikari/windows-tasks'
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
 #mod 'puppetlabs/inifile', '5.0.1'
