@@ -3,7 +3,7 @@ forge 'https://forge.puppet.com'
   mod 'apache',
     :git => 'https://github.com/RamAdhikari/puppet-apache'
   mod 'tanium',
-    :git => 'https://github.com/RamAdhikari/tenium',	
+    :git => 'https://github.com/RamAdhikari/tenium'
   mod 'windowstasks',
     :git => 'https://github.com/RamAdhikari/windows-tasks'
 # Modules from the Puppet Forge
