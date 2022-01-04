@@ -6,7 +6,6 @@ forge 'https://forge.puppet.com'
     :git => 'https://github.com/RamAdhikari/tenium',	
   mod 'windowstasks',
     :git => 'https://github.com/RamAdhikari/windows-tasks'
->>>>>>> 1108203ccd8ae7b5f19ee168b03a65f4fe767e4b
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
 #mod 'puppetlabs/inifile', '5.0.1'
