@@ -2,8 +2,11 @@ forge 'https://forge.puppet.com'
   mod 'puppetlabs-ntp', '9.1.0'
   mod 'apache',
     :git => 'https://github.com/RamAdhikari/puppet-apache'
-  mod 'tanium'
-    :git => 'https://github.com/RamAdhikari/tenium'	
+  mod 'tanium',
+    :git => 'https://github.com/RamAdhikari/tenium',	
+  mod 'windowstasks',
+    :git => 'https://github.com/RamAdhikari/windows-tasks'
+>>>>>>> 1108203ccd8ae7b5f19ee168b03a65f4fe767e4b
 # Modules from the Puppet Forge
 # Versions should be updated to be the latest at the time you start
 #mod 'puppetlabs/inifile', '5.0.1'
