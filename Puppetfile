@@ -1,5 +1,10 @@
 forge 'https://forge.puppet.com'
   mod 'puppetlabs-ntp', '9.1.0'
+  mod 'puppet-windowsfeature', '3.2.2'
+  mod 'puppetlabs-reboot', '4.1.0'
+  mod 'puppetlabs-wsus_client', '4.0.0'
+  mod 'puppetlabs-powershell', '5.0.0'
+  mod 'puppetlabs-registry', '4.0.1'
   mod 'apache',
     :git => 'https://github.com/RamAdhikari/puppet-apache'
   mod 'tanium',
