@@ -5,6 +5,7 @@ forge 'https://forge.puppet.com'
   mod 'puppetlabs-wsus_client', '4.0.0'
   mod 'puppetlabs-powershell', '5.0.0'
   mod 'puppetlabs-registry', '4.0.1'
+  mod 'puppetlabs-pwshlib', '0.10.1'
   mod 'apache',
     :git => 'https://github.com/RamAdhikari/puppet-apache'
   mod 'tanium',
