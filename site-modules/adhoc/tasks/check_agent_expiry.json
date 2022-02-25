@@ -8,6 +8,6 @@
   },
 
   "implementations": [
-    {"name": "check_agent_expiry.sh", "requirements": ["shell"], "files": ["ca_extend/files/common.sh"], "input_method": "environment"}
+    {"name": "check_agent_expiry.sh", "requirements": ["shell"], "files": ["adhoc/files/common.sh"], "input_method": "environment"}
   ]
 }
