@@ -1,3 +1,3 @@
 class profile::wrapper::odpengmdeatp{
-  class{'profile::windows::windowsmdeatp':}
+  include profile::windows::windowsmdeatp
 }
