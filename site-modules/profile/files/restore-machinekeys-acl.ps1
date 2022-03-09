@@ -1,6 +1,6 @@
-$ErrorActionPreference = “stop”
+ErrorActionPreference = “stop”
 Try{
-    if(((((((get-acl C:\\ProgramData\\Microsoft\\Crypto\\RSA\\MachineKeys).access)| select IdentityReference | ft -HideTableHeaders | Out-String).trim()) -replace "\`r\`n", "" ) -replace "              ",",") -ne "Everyone,BUILTIN\Administrators")
+    if(((Get-Acl 'C:\Programdata\Microsoft\Crypto\RSA\MachineKeys\' |select-object -ExpandProperty sddl|Out-String).length) -gt 45)
     {
         $TargetFolder='C:\ProgramData\Microsoft\Crypto\RSA\MachineKeys'
         $ExistingPermission=Get-Acl -Path $TargetFolder |FL|out-string
@@ -21,4 +21,5 @@ catch
 {
     Write-EventLog –LogName Application –Source “Puppet” –EntryType Warning –EventID 1000 –Message "$error"
 }
+ 
  
