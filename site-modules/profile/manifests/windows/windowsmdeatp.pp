@@ -3,7 +3,7 @@ class profile::windows::windowsmdeatp($wmikey='01 00 04 80 44 00 00 00 54 00 00 
 {
 if ($facts['operatingsystemmajrelease']=='2019'){
 
-  $all_registry_keys= deep_merge($registry_keys)
+  $all_registry_keys= $registry_keys
   $all_registry_keys.each | String $key, Hash $properties|{
     registry_value{$key:
       * =>$properties
