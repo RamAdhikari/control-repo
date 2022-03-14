@@ -1,4 +1,4 @@
-profile::windows::windowsmdestp::registry:
+profile::windows::windowsmdeatp::registry:
   'HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection\DisableEnterpriseAuthProxy':
     type  => dword
     data  => 1
