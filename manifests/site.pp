@@ -29,4 +29,4 @@ node default {
   
   include role::soe
 }
-$mjrversion= regsubst($facts[os][release][major], / /, '_', 'G')
+#$mjrversion= regsubst($facts[os][release][major], / /, '_', 'G')

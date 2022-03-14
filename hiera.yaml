@@ -9,7 +9,7 @@ hierarchy:
     data_hash: yaml_data
     paths:
       - "nodes/%{trusted.certname}.yaml"
-      - "os/%{facts.os.family}_%{mjrversion}.yaml"
+      - "os/%{facts.os.family}_%{facts.os.release.major}.yaml"
       - "os/%{facts.os.family}.yaml"
       - "os/%{facts.kernel}.yaml"
       - "common.yaml"
