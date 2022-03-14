@@ -24,7 +24,8 @@ File { backup => false }
 # Puppet Enterprise console and External Node Classifiers (ENC's).
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
+$mjrversion= regsubst($facts[os][release][major], / /, '_', 'G')
 node default {
-  $mjrversion= regsubst($facts[os][release][major], / /, '_', 'G')
+  
   include role::soe
 }

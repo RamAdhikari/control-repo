@@ -5,7 +5,7 @@ if ($facts['operatingsystemmajrelease']=='2019'){
 
   $all_registry_keys= $registry_keys
   $all_registry_keys.each | String $key, Hash $properties|{
-    registry_value{$key:
+    registry_value{ $key:
       * =>$properties
 
     }
@@ -44,7 +44,6 @@ if ($facts['operatingsystemmajrelease']=='2019'){
   service { 'sense':
     ensure  => 'running',
     enable  => true,
-    timeout =>120,
 }
 }
 }
