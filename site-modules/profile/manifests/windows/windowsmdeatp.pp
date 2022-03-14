@@ -1,20 +1,30 @@
-class profile::windows::windowsmdeatp($wmikey='01 00 04 80 44 00 00 00 54 00 00 00 00 00 00 00 14 00 00 00 02 00 30 00 02 00 00 00 00 00 14 00 ff 0f 12 00 01 01 00 00 00 00 00 05 12 00 00 00 00 00 14 00 e1 04 12 00 01 01 00 00 00 00 00 05 0b 00 00 00 01 02 00 00 00 00 00 05 20 00 00 00 20 02 00 00 01 02 00 00 00 00 00 05 20 00 00 00 20 02 00 00')
+class profile::windows::windowsmdeatp($wmikey='01 00 04 80 44 00 00 00 54 00 00 00 00 00 00 00 14 00 00 00 02 00 30 00 02 00 00 00 00 00 14 00 ff 0f 12 00 01 01 00 00 00 00 00 05 12 00 00 00 00 00 14 00 e1 04 12 00 01 01 00 00 00 00 00 05 0b 00 00 00 01 02 00 00 00 00 00 05 20 00 00 00 20 02 00 00 01 02 00 00 00 00 00 05 20 00 00 00 20 02 00 00',
+  Hash $registry_keys ={},)
 {
 if ($facts['operatingsystemmajrelease']=='2019'){
 
+  $all_registry_keys= deep_merge($registry_keys)
+  $all_registry_keys.each | String $key, Hash $properties|{
+    registry_value{$key:
+      * =>$properties
+
+    }
+
+  }
   registry_value { 'HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\696C1FA1-4030-4FA4-8713-FAF9B2EA7C0A':
     ensure => absent,
     }
-  registry_value { 'HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection\DisableEnterpriseAuthProxy':
-    ensure => present,
-    type  => dword,
-    data  => '1',
-    }
-  registry_value { 'HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\ForceDefenderPassiveMode':
-    ensure => present,
-    type  => dword,
-    data  => '1',
-    }
+  #registry_value { 'HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection\DisableEnterpriseAuthProxy':
+   # ensure => present,
+   # type  => dword,
+   #ata  => '1',
+   # }
+  #registry_value { 'HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\ForceDefenderPassiveMode':
+   # ensure => present,
+   # type  => dword,
+   #data  => '1',
+   # }
+
 
   registry_value{'HKLM\SYSTEM\CurrentControlSet\Control\WMI\Security\14f8138e-3b61-580b-544b-2609378ae460':
     ensure => present,
