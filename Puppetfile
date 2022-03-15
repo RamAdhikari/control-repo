@@ -7,6 +7,7 @@ forge 'https://forge.puppet.com'
   mod 'puppetlabs-registry', '4.0.1'
   mod 'puppetlabs-pwshlib', '0.10.1'
   mod 'puppetlabs-bolt_shim', '0.4.0'
+  mod 'puppetlabs-ca_extend', '3.0.0'
   mod 'apache',
     :git => 'https://github.com/RamAdhikari/puppet-apache'
   mod 'tanium',

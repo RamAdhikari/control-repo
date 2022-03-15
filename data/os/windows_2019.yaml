@@ -2,6 +2,7 @@ profile::windows::windowsmdeatp::registry_keys:
   'HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection\DisableEnterpriseAuthProxy':
     type  => dword
     data  => 1
+    
   'HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection\ForceDefenderPassiveMode':
     type  => dword,
     data  => 1 
